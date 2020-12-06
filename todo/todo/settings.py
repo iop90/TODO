@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '__*#na^3^xr=-)*!_6j%1=%tb@*0&m8*3h@4(pz^p3_mpkv%%p'
+SECRET_KEY = '__*#na^3^xr=-)*!_6j%1=%tb@*0&m8*3h@4(pz^p3_%%p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'main',
+    'todo_item'
 ]
 
 MIDDLEWARE = [
@@ -75,8 +77,12 @@ WSGI_APPLICATION = 'todo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        "ENGINE": "django.db.backends.postgresql",
+        "HOST": "127.0.0.1",
+        "NAME": "todo",
+        "USER": "postgres",
+        "PASSWORD": "Vladimir!1985",
+        "PORT": 5432
     }
 }
 
