@@ -8,6 +8,7 @@ data = {
         {'name': 'Подарок для Лехи', 'is_done': False}
     ],
     'user_name': 'Admin',
+    'list_name': 'Подарки на НГ'
 }
 
 
